@@ -84,7 +84,7 @@ $$
 T_N = O(logn)
 $$ 
 
-### Square order 平方阶
+##### Square order 平方阶
 
 - 1
   
