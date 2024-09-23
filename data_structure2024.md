@@ -1,10 +1,11 @@
 # 基本概念  
-  
+
 ## 结构  
-  
+
 ### 数据结构  
+
 ![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/32528deb12773601c2a8e683106948a9ee84b021098fd4d18f4e9fa66b0dbe0d.png)
-  
+
 #### 逻辑结构  
 - **Set**：集合，元素之间无特定关系。  
 - **Linear**：线性结构，元素之间存在一对一关系。  
@@ -21,28 +22,130 @@
   - **优点**：模块化设计。  
   
 ## 算法  
-  
+
 ### 时间复杂度 T(N)  
-  
+
 #### 三个假设 
-$T_{avg}(N) \And T_{worst}(N)$
+$$
+T_{avg}(N) \And T_{worst}(N)
+$$
+
 1. 指令按顺序执行。  
 2. 每一步被视作一个时间复杂度。  
 3. 整型数据内存大小一定，且拥有无限内存空间。  
-  
+
 #### Asymptotic Notations（渐进表示法） 
-$T(N)= O(f(N))$
+$$
+T(N)= O(f(N))
+$$
 
 ![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/cb2f14db6d0200f2e0602e76553274e6c14b6ac3b25b5034243a69084014e7f2.png)
+
+#### 常见时间复杂度  
+##### Constant order 常数阶
+
+```c
+int sum = 0, n = 100;    // 1 step
+sum =  (1 + n ) * n/2;    // 1 step (or 4 step ✓) 
+printf (“%d”, sum) ;     // 1 step  
+```
+$$
+T_N   = O(3) = O(1) 
+$$ 
+
+##### Linear order 线性阶
+
+```c
+int i; for (i = 0; i < n; i++) 
+{ 
+    /*execution steps of O(1) */ 
+} 
+```
+
+$$
+T_N   = O(N)  
+$$
+
+##### Log order 对数阶
+
+```c
+int count = 1;
+ while (count < n) {
+    count = count * 2;      
+    /*execution steps of O(1) */ 
+} 
+```
+
+$$
+2^X=n \ge x=log_2n
+$$
+
+$$
+T_N = O(logn)
+$$ 
+
+### Square order 平方阶
+
+- 1
   
+  ```c
+  int i j;
+  for (i = 0; i < n; i++){      
+      for (j = 0; j < n; j++){           
+          /*execution steps of O(1) */       
+      } 
+  } 
+  ```
+  
+$$
+T_N   = O(N^2)
+$$
+
+- 2
+  
+  ```c
+  int i j;
+  for (i = 0; i < m; i++) {
+        for (j = 0; j < n; j++){
+            /*execution steps of O(1) */       
+      } 
+  }
+    ```
+  
+$$
+T_N   = O(m \times n)
+$$
+
+- 3
+  
+  ```c
+  int i j;
+  for (i = 0; i < n; i++){
+      for (j = i; j < n; j++){
+          /*execution steps of O(1) */   
+      }
+  } 
+  ```
+
+$$
+T(N) = n + (n-1) + (n-2) +…+1= (n^2+n)/2 = O(n^2)
+$$
+
 ##### 如何得到O(n)  
 - **O(n)的计算**：通常关注算法中最高次项，忽略低次项和常数项。 
 ![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/ccfc33a5f5f2e56e72fdcfef3fd631edee2e99b8713529c5b613c2719d2bfdd9.png) 
 ![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/dd94357049bfd7b751a797a2a7f723d90c47a5945ed40797dd1fe21f736d0496.png)
 
-$T_{1}(N)+T_{2}(N)= max(O(f(N)),O(g(N)))$
+$$
+T_{1}(N)+T_{2}(N)= max(O(f(N)),O(g(N)))
+$$
+
+
 - ![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/7432ccb2a5ab822fed7c91527e83affd8d70e56055f05e2bdae1cd35fc7eab5e.png)
-$T_{1}(N)*T_{2}(N)=O(f(N)*g(N))$
+$$
+T_{1}(N)*T_{2}(N)=O(f(N)*g(N))
+$$
+  
 
 ##### 其他三种（了解即可）  
 - Ω(n), θ(n), o(n)  
@@ -53,12 +156,12 @@ $T_{1}(N)*T_{2}(N)=O(f(N)*g(N))$
 - **On-line Algorithm**：在线算法，处理输入数据时，必须立即产生输出，无法看到全部输入数据。![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/01b569a098587915dd1be9860e4e15e85efae4882abe6ec1f832412ab9be211e.png)  
   
 ## 线性表 (Linear List)  
-  
+
 ### 概念  
 线性表是元素间存在一对一关系，每个元素（除了最后一个）都有唯一后继者的列表。  
-  
+
 ### 类别  
-  
+
 #### 一般类  
 可以在列表中的任意位置插入和删除数据。  
 - **数组**  
