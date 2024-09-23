@@ -1,7 +1,7 @@
 # 基本概念  
   
 ## 数据结构  
-  https://github.com/xinyi1227/Data-Structure2024/blob/main/image/32528deb12773601c2a8e683106948a9ee84b021098fd4d18f4e9fa66b0dbe0d.png
+  ![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/32528deb12773601c2a8e683106948a9ee84b021098fd4d18f4e9fa66b0dbe0d.png)
 ### 逻辑结构  
 - **Set**：集合，元素之间无特定关系。  
 - **Linear**：线性结构，元素之间存在一对一关系。  
