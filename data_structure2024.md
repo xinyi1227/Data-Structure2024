@@ -20,7 +20,7 @@
 ## 算法  
   
 ### 时间复杂度 T(N)  
-![]()
+![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/方程1.png)
 - **三个假设**：  
   1. 指令按顺序执行。  
   2. 每一步被视作一个时间单位。  
