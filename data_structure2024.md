@@ -4,7 +4,7 @@
 
 ### 数据结构  
 
-![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/32528deb12773601c2a8e683106948a9ee84b021098fd4d18f4e9fa66b0dbe0d.png)
+![32528deb12773601c2a8e683106948a9ee84b021098fd4d18f4e9fa66b0dbe0d](assets/32528deb12773601c2a8e683106948a9ee84b021098fd4d18f4e9fa66b0dbe0d.png)
 
 #### 逻辑结构  
 - **Set**：集合，元素之间无特定关系。  
@@ -39,7 +39,7 @@ $$
 T(N)= O(f(N))
 $$
 
-![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/cb2f14db6d0200f2e0602e76553274e6c14b6ac3b25b5034243a69084014e7f2.png)
+![cb2f14db6d0200f2e0602e76553274e6c14b6ac3b25b5034243a69084014e7f2](assets/cb2f14db6d0200f2e0602e76553274e6c14b6ac3b25b5034243a69084014e7f2-7315989.png)
 
 #### 常见时间复杂度  
 ##### Constant order 常数阶
@@ -51,7 +51,7 @@ printf (“%d”, sum) ;     // 1 step
 ```
 $$
 T_N   = O(3) = O(1) 
-$$ 
+$$
 
 ##### Linear order 线性阶
 
@@ -82,7 +82,7 @@ $$
 
 $$
 T_N = O(logn)
-$$ 
+$$
 
 ##### Square order 平方阶
 
@@ -110,7 +110,7 @@ $$
             /*execution steps of O(1) */       
       } 
   }
-    ```
+  ```
   
 $$
 T_N   = O(m \times n)
@@ -132,13 +132,13 @@ T(N) = n + (n-1) + (n-2) +…+1= (n^2+n)/2 = O(n^2)
 $$
 
 ##### 如何得到O(n)  
-- **O(n)的计算**：通常关注算法中最高次项，忽略低次项和常数项。 
-![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/ccfc33a5f5f2e56e72fdcfef3fd631edee2e99b8713529c5b613c2719d2bfdd9.png) 
-![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/dd94357049bfd7b751a797a2a7f723d90c47a5945ed40797dd1fe21f736d0496.png)
+- **O(n)的计算**：![ccfc33a5f5f2e56e72fdcfef3fd631edee2e99b8713529c5b613c2719d2bfdd9](assets/ccfc33a5f5f2e56e72fdcfef3fd631edee2e99b8713529c5b613c2719d2bfdd9.png)通常关注算法中最高次项，忽略低次项和常数项。 
+
+![dd94357049bfd7b751a797a2a7f723d90c47a5945ed40797dd1fe21f736d0496](assets/dd94357049bfd7b751a797a2a7f723d90c47a5945ed40797dd1fe21f736d0496.png)
 
 
 - 在选择语句中
-![](https://github.com/xinyi1227/Data-Structure2024/blob/main/image/7432ccb2a5ab822fed7c91527e83affd8d70e56055f05e2bdae1cd35fc7eab5e.png)
+![7432ccb2a5ab822fed7c91527e83affd8d70e56055f05e2bdae1cd35fc7eab5e](assets/7432ccb2a5ab822fed7c91527e83affd8d70e56055f05e2bdae1cd35fc7eab5e.png)
 
 $$
 T_{1}(N)+T_{2}(N)= max(O(f(N)),O(g(N)))
@@ -147,7 +147,7 @@ $$
 $$
 T_{1}(N)*T_{2}(N)=O(f(N)*g(N))
 $$
-  
+
 
 ##### 其他三种（了解即可）  
 - Ω(n), θ(n), o(n)  
@@ -181,8 +181,12 @@ T(N) = T(N-1)+T(N-2)+2 \ge Fib(N)
 $$
 
 #### 问题引入：最大子序列求和问题 Maximun Subsequence Sum Problem**
-- Given (possibly negative) integers A1, A2, …, AN, find the maximum value of $ {\textstyle \sum_{j}^{k=i}}A_k $
-算法1
+- Given (possibly negative) integers A1, A2, …, AN, find the maximum value of 
+  $$
+  {\textstyle \sum_{j}^{k=i}}A_k
+  $$
+
+  算法1
 ```c
 int  MaxSubsequenceSum ( const int A[],  int  N ) { 
     int  ThisSum,  MaxSum,  i,  j,  k; 
@@ -299,15 +303,18 @@ int MaxSubsequenceSum( const int  A[ ],  int  N )
 $$
 T(N) = O(N)
 $$
-  
-## 线性表 (Linear List)  
 
-### 概念  
+# Linear List 线性表
+
+## 概念  
+
 线性表是元素间存在一对一关系，每个元素（除了最后一个）都有唯一后继者的列表。  
 
-### 类别  
 
-#### 一般类  
+
+## 类别  
+
+### 一般类  
 可以在列表中的任意位置插入和删除数据。  
 - **数组**  
 - **链表**  
@@ -315,12 +322,14 @@ $$
 - **双链表**  
 - **环形链表**  
   
-#### 限制类  
+### 限制类  
 只可以在列表的末尾插入或删除数据。  
 - **堆栈 (Stack)**：Last-In-First-Out（后进先出）。  
 - **队列 (Queue)**：First-In-First-Out（先进先出）。
 
-### Array List 顺序表（数组）
+
+
+## Array List 数组
 
 - Elements are stored contiguously in memory as an array (easy to find kth element) 元素作为数组连续存储在内存中（容易找到第k个元素）
 
@@ -361,7 +370,7 @@ struct LIST {
     L.last // length of L, position of last element 
 ```
 
-#### 插入（前插） Array list-INSERT Operation
+### 插入（前插） Array list-INSERT Operation
 
 ```c
  void Insert (int newItem, List &L, int location) {       
@@ -381,7 +390,7 @@ struct LIST {
  }//Time Complexity 时间复杂度：O(n) 
 ```
 
-#### 删除 Array list-DELETE Operation
+### 删除 Array list-DELETE Operation
 
 ```c
  void Delete( Element X, LIST &L) {   
@@ -402,7 +411,7 @@ struct LIST {
      }//Time Complexity：O(n) 
 ```
 
-#### Find and Retrieve Operations
+### Find and Retrieve Operations
 ```c
  position Find ( elementtype x ,
                                             LIST L )
@@ -427,7 +436,10 @@ elementtype Retrieve ( position p ,
 
 ```
 
-### Linked List 链表
+
+
+## Linked List 链表
+
 ```c
 Type definition：
 struct celltype {
@@ -440,7 +452,7 @@ typedef struct celltype *LIST;
 typedef struct celltype * position;
 
 ```
-#### Find and Retrieve Operations
+### Find and Retrieve Operations
 ```c
 position Find ( elementtype x, LIST L )
 {  position p ;
@@ -458,7 +470,7 @@ elementtype Retrieve ( position p , LIST L )
 } //Time Complexity：O(1)
 
 ```
-#### INSERT Operation
+### INSERT Operation
 
 ```c
 void Insert ( elementtype x, position p, LIST &L )
@@ -470,7 +482,7 @@ void Insert ( elementtype x, position p, LIST &L )
 } //Time Complexity O(1)
 
 ```
-#### DELETE Operation
+### DELETE Operation
 ```c
 void Delete (Element X, LIST &L )
 {  position P, TmpCell ;
@@ -483,3 +495,459 @@ void Delete (Element X, LIST &L )
     }
  } //Time Complexity：O(1)
 ```
+
+
+
+## Cursor List 游标线性表
+
+### 概念
+
+- 用数组的形式模拟指针
+- 每个节点包含两个部分，一个部分是数据值，一部分是下一个节点的序号
+- available节点：数据值为空，但有指向下一个节点的序号；最后一个节点的序号为-1
+
+### Representation
+
+```c
+Type Definition：
+typedef struct {
+    elementtype element ;
+    int next ;
+} spacestr; /*Node Type*/
+
+spacestr SPACE[ maxsize ] ;/*Memory pool*/
+
+typedef int position，cursor;
+cursor av; /*available node*/
+
+SPACE[i].next
+/*position of next element */
+```
+
+
+
+### GetNode and FreeNode
+
+```c
+//get an unallocated node
+cursor GetNode()  
+{  
+   cursor p;
+   if (SPACE[available].next ==-1) /*最后一个节点的序号为-1*/
+       p=-1;
+   else
+   {   p= SPACE[available].next ;
+       SPACE[available].next = SPACE[ p ].next ;
+   }
+    return p;
+}
+
+```
+
+```c
+//free node
+void FreeNode(cursor q) //delete q;
+{ 
+    SPACE [ q ].next = SPACE[available].next ;
+    SPACE[available].next = q ;
+} /* free node to the pool*/
+
+```
+
+
+
+### Insert and Delete
+
+```c
+//insert after position p
+void INSERT ( elementtype x, position p, spacestr *SPACE )
+{  
+   position q ;
+   q = GetNode( ) ;
+   SPACE[ q ].element = x ;
+   SPACE[ q ].next = SPACE[ p ].next ;
+   SPACE[ p ].next = q ;
+}
+```
+
+```c
+//delete the node after position p
+void DELETE ( position p, spacestr *SPACE )
+{  
+    position q ;
+    if ( SPACE[ p ].next != -1 )
+    {   q = SPACE[ p ].next ;
+        SPACE[ p ].next = SPACE[ q ].next ;
+        FreeNode( q ) ;
+    }
+}
+```
+
+
+
+## Doubly-linked List 
+
+### Insert and Delete
+
+```c
+//insert at position p
+void INSERT( elementtype x, position p, DLIST &L )
+{
+    position q ;
+    q = new dcelltype ;
+    q→element = x ;
+    p→previous→next = q ;
+    q→previous = p→previous ;
+    q→next = p ;
+    p→previous = q ;
+}
+```
+
+```c
+//delete node at position p
+void DELETE(  position p, DLIST  &L )
+{
+      if (p->previous!=NULL)
+            p→previous→next = p→next;
+      if (p→next!=NULL)
+            p→next →previous = p→previous ;
+      delete p;
+}
+```
+
+
+
+## **Other types of lists**
+
+- **Circularly linked lists**
+- **Circularly Doubly Linked lists**
+
+
+
+# 堆栈与队列
+
+## Stack
+
+### Definition
+
+##### ![截屏2024-09-26 11.14.21](assets/%E6%88%AA%E5%B1%8F2024-09-26%2011.14.21.png)
+
+- A stack is a Last-In-First-Out (LIFO) list, that is, an ordered list in which insertions and deletions are made at the top only.
+
+### Operation
+
+- **Int** **IsEmpty**( Stack S );
+
+-  **Stack** **CreateStack**( );
+
+-  **MakeEmpty**( Stack S );
+
+- **Push**(**ElementType** **X, Stack S );** 
+
+- **ElementType** **Top**( Stack S );
+
+-  **Pop**( Stack S );
+
+- **Note:**
+
+  - Underflow: 上溢
+
+     A Pop (or Top) on an empty stack is an error in the stack ADT.
+
+  -  Overflow: 下溢
+
+    Push on a full stack is an implementation error.
+
+
+
+### **Linked List Implementation**
+
+- S is the address of the stack pointer
+
+  S->element=null
+
+  S->next->element = Elem.1 // top element
+
+```c++
+struct node;
+typedef struct node * PtrToNode;
+typedef PtrToNode Stack;
+
+struct node {
+	ElementType element;
+	PtrToNode next;
+};
+```
+
+![image-20240926124411357](assets/image-20240926124411357.png)
+
+
+
+#### Pop 上溢
+
+```c
+void pop (Stack s) {
+	PtrToNode first;
+
+	if (isEmpty(s)) {
+		printf(“empty stack”);
+	} else {
+		first = s->next;
+		s->next = s->next->next;
+		free(first);
+	}
+}
+```
+
+
+
+#### Push 压栈
+
+```c
+void push (ElementType x, Stack s) {
+	PtrToNode = temp;
+
+	temp = malloc(sizeof(structNode));
+	if (temp == NULL) {
+		printf(“out of space!!”);
+	} else {
+		temp->element = x;
+		temp ->next = s->next;
+		s->next = temp
+	}
+}
+```
+
+
+
+#### Top 查找头元素
+
+```c
+ElementType top(Stack s) {
+	if (!isEmpty(s)) {
+		return s->next->element;
+	}
+	printf(“Empty stack”);
+	return 0;
+}
+```
+
+
+
+### **Array implementation**
+
+```c
+struct  StackRecord {
+	int     Capacity ;              /* size of stack */
+	int     TopOfStack;          /* the top pointer */
+	/* ++ for push, -- for pop, -1 for empty stack */
+	ElementType  *Array;    /* array for stack elements */
+ } ; 
+```
+
+- **Popular implementation (v.s. Linked list implem.), why?**
+
+  - 更快速的常数完成时间（具体说明）
+
+  - 实际的堆栈通常不大（不浪费空间）
+- **Note** 
+  - Error checking before push or pop
+
+
+
+### Application
+
+#### **Balancing Symbols** 符号完整验证
+
+- ##### Check if parenthesis ( ), brackets [ ], are balanced.
+
+- **Keep** **a** **stack**
+
+  - Read the charecters one by one
+
+  - If the charecter is ‘(‘ or ‘[‘ push into stack
+
+  - If the charecter is ‘)’ or ‘]’ pop the stack
+
+  - if the stack is empty ERROR
+
+  - if the symbol popped does not match with character ERROR
+
+  - Continue until the end of file
+
+  - At the end of file
+
+     if the stack is not empty ERROR
+
+    ​    else SUCCESS
+
+```c
+Algorithm  {
+    Make an empty stack S;
+    while (read in a character c) {
+        if (c is an opening symbol)
+            Push(c, S);
+        else if (c is a closing symbol) {
+            if (S is empty)  { ERROR; exit; }
+            else  {  /* stack is okay */
+                if  (Top(S) doesn’t match c)  { ERROR, exit; }
+                else  Pop(S);
+            }  /* end else-stack is okay */
+        }  /* end else-if-closing symbol */
+    } /* end while-loop */ 
+    if (S is not empty)  ERROR;
+}
+```
+
+
+
+#### Postfix Evaluation 后缀表达式
+
+- ##### Example
+
+  - ##### An infix expression:   a + b * c - d / e 中缀
+
+  - ##### A prefix expression:   - + a * b c / d e 前缀
+
+  - ##### A postfix expression:  a b c * + d e / - 后缀
+
+- 将顺序输入的数字压栈，遇见符号时，对栈里的数字进行两次连续出栈，并计算结果，再将结果压栈，等待下一次计算
+- T(N) = O(N)
+
+
+
+#### Infix to Postfix Conversion 中缀表达式转化为后缀表达式
+
+- T(N) = O(N)
+
+- 没有"（）"
+
+  *Eg. a* + *b* * *c* - *d* = ? => *a b c* * + *d* -
+
+  - 1. 逐一阅读。
+
+    2. IF 它不是符号，则作为后缀表达式的一部分输出。
+
+    3. ELSE // 它是符号
+
+    ​	与堆栈top的符号进行比较。
+
+    ​	if 它的优先级低于或等于顶部符号，或者它是“）”，从top符号，输出它，直到优先级较低的条目，并push当前符号。
+
+    ​	else 将当前符号推入堆栈中。
+
+    | 被扫描的字母或符号 |                            操作                             | 输出（先->后） | 栈内情况（top->push) |
+    | :----------------: | :---------------------------------------------------------: | :------------: | :------------------: |
+    |         a          |                     不是符号，直接输出                      |       a        |         NULL         |
+    |         +          |      +是符号，与top符号（NULL）比较，结果为优先级更高       |       a        |      +（push）       |
+    |         b          |                     不是符号，直接输出                      |      a b       |      +（push）       |
+    |         *          |        *是符号，与top符号（+）比较，结果为优先级更高        |      a b       |         * +          |
+    |         c          |                     不是符号，直接输出                      |     a b c      |         * +          |
+    |         -          | -是符号，与top符号（*）比较，结果为优先级更低，输出栈内符号 |   a b c * +    |          -           |
+    |         d          |                     不是符号，直接输出                      |  a b c * + d   |          -           |
+    |         =          |            检查栈内数据情况，把剩余数据全部输出             | a b c * + d -  |         NULL         |
+    
+    
+
+- 有"（）"
+
+  *Eg. a* * ( *b* + *c* ) / *d* => *a b c* + * *d* /
+
+  - **括号内的符号优先级均高于“（）”，则均push**
+
+  | 被扫描的字母或符号 |                         操作                          | 输出（先->后） | 栈内情况（top->push) |
+  | :----------------: | :---------------------------------------------------: | :------------: | :------------------: |
+  |         a          |                  不是符号，直接输出                   |       a        |         NULL         |
+  |         *          |   *是符号，与top符号（NULL）比较，结果为优先级更高    |       a        |          *           |
+  |         (          |     (是符号，与top符号（*）比较，结果为优先级更高     |       a        |         ( *          |
+  |         b          |                  不是符号，直接输出                   |      a b       |         ( *          |
+  |         +          |    +是符号，在“（）”内部，优先级均高于”（）“，push    |      a b       |        + ( *         |
+  |         c          |                  不是符号，直接输出                   |     a b c      |        + ( *         |
+  |         )          |            ）是符号，输出栈内符号直至“（”             |    a b c +     |          *           |
+  |         /          | /是符号，与top符号（*）比较，优先级一样，输出栈内符号 |   a b c + *    |          /           |
+  |         d          |                  不是符号，直接输出                   |  a b c + * d   |          /           |
+  |         =          |         检查栈内数据情况，把剩余数据全部输出          | a b c + * d /  |         NULL         |
+
+- **注意**![截屏2024-09-30 22.38.38](assets/%E6%88%AA%E5%B1%8F2024-09-30%2022.38.38.png)
+
+
+
+#### Functions calls 程序响应
+
+![截屏2024-09-28 09.24.39](assets/%E6%88%AA%E5%B1%8F2024-09-28%2009.24.39.png)
+
+
+
+### Queue
+
+#### Definition
+
+##### ![截屏2024-09-28 09.29.21](assets/%E6%88%AA%E5%B1%8F2024-09-28%2009.29.21.png)
+
+- A queue is a First-In-First-Out (FIFO) list, that is, an ordered list in which insertions take place at one end and deletions take place at the opposite end.
+
+
+
+#### Operation
+
+- **int IsEmpty( Queue Q );**
+- **Queue CreateQueue( );** 
+- **MakeEmpty( Queue Q );** 
+- **Enqueue( ElementType X, Queue Q );** 
+- **ElementType Front( Queue Q );** 
+- **Dequeue( Queue Q );** 
+
+
+
+#### **Linked list implementation of Queues**
+
+```c
+typedef   struct  node  {
+     elemtype  data ;
+     struct  node  *  next ;
+} * pointer;
+typedef  struct  {
+     pointer   front, rear  ;
+} linkedqueue ;
+```
+
+![截屏2024-09-28 09.34.45](assets/%E6%88%AA%E5%B1%8F2024-09-28%2009.34.45.png)
+
+#### **Array implementation of Queues**
+
+```c
+#define   MAXLEN  user_supply
+typedef   struct  {
+     elemtype  elem [ MAXLEN ] ;
+     int  front ,  rear;
+} queue;
+```
+
+![截屏2024-09-28 09.34.24](assets/%E6%88%AA%E5%B1%8F2024-09-28%2009.34.24.png)
+
+
+
+#### Circular queue
+
+![截屏2024-09-30 22.50.36](assets/%E6%88%AA%E5%B1%8F2024-09-30%2022.50.36.png)
+
+- ##### **如何判断环形队列是空还是满？**
+
+  - 做标记
+
+    flag==0: empty; flag==1: full
+
+  - 看头尾序号
+
+    front == rear: empty;
+
+    (rear+1)%QueueSize == front: full
+
+    ![截屏2024-09-30 22.54.04](assets/%E6%88%AA%E5%B1%8F2024-09-30%2022.54.04.png)
+
+
+
+#### **Circular Queue vs Link Queue**
+
+- Circular Queue 的长度是固定的，可能会浪费空间；Link Queue更加灵活
+- Circular Queue 不需要分配或者释放节点，节省时间
